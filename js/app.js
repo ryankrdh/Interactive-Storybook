@@ -1,6 +1,4 @@
 'use strict';
-
-'use strict';
 var bodyMain = document.getElementById('bodymain');
 var book = [];
 var dog = {};
@@ -54,7 +52,7 @@ new SceneConstructor(
   'img/doghead.jpg'
 );
 
-/*------------------------------------RYAN's SCENES START-----------------------------------------*/
+/*------------------------------------SCENES START-----------------------------------------*/
 
 function checkIfFainted(scene) {
   if (dog.hitPoints <= 0) {
@@ -66,7 +64,7 @@ function checkIfFainted(scene) {
   }
 }
 
-///////////////////////////////// ITEM CONSTRUCTOR ///////////////////////////////////
+/*------------------------------------ITEM CONSTRUCTORS-----------------------------------------*/
 function ItemOBJ(name, id) {
   this.name = name;
   this.id = id;
@@ -156,7 +154,7 @@ function renderPage(sceneToRender) {
   }
 }
 
-/////////////////////////////// HUD CONSTRUCTOR ///////////////////////////////
+/*------------------------------------HUD CONSTRUCTORS-----------------------------------------*/
 
 class HealthBar {
   constructor(element, initialValue = dog.hitPoints) {
@@ -223,7 +221,7 @@ class EnergyBar {
 const AB = new EnergyBar(document.querySelector('.energy-Bar'), dog.energyHP); // turns the new instance into a constant with an initial value of 0.
 AB.setValue(dog.energyHP); // will create a new health bar instance and pass dog.hp i.e. objects current hitpoint value.
 
-/////////////////////////////// DAMAGE CONTROL FUNCTIONS ///////////////////////////////
+/*------------------------------------DAMAGE CONTROLS-----------------------------------------*/
 
 function doDamage(damage) {
   // does energy exist? if so apply damage to energy before health
@@ -276,7 +274,7 @@ function gainEnergy(damage) {
   }
 }
 
-/////////////////////////////// ITEM EVENT LISTENER AND CLICK FUNCTIONS ///////////////////////////////
+/*------------------------------------ITEM EVEN LISTENER AND CLICK FUNCTIONS-----------------------------------------*/
 
 var bowlSlot = document.getElementById('img-item-bowl');
 var waterSlot = document.getElementById('img-item-water');
@@ -361,7 +359,7 @@ function handleSleepClick() {
   }
 }
 
-///////////////////////////// ENEMY BATTLE FUNCTIONS /////////////////////////////
+/*------------------------------------ENEMY BATTLE FUNCTIONS-----------------------------------------*/
 
 function battle(dog, enemy) {
   play(yelp);
@@ -412,7 +410,7 @@ var ryanLeopard = {
   attackPower: 30,
 };
 
-//////////////////////////////// LOCAL STORAGE ////////////////////////////////
+/*------------------------------------LOCAL STORAGE-----------------------------------------*/
 
 function savedog() {
   localStorage.dog = JSON.stringify(dog);

@@ -17,7 +17,11 @@ Read the choices and click to move to the next scene.
 ## Game Functions
 
 The player has HP and Energy. When taking damage from battles, the energy will drain first before the HP.
+
+The player and all the animals will have their own HP and attack power.
+
 The player is able to 'pick up' Items to use later.
+
 The game is saved in the local storage to be continued later.
 
 ## Getting Started
