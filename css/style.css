@@ -3,12 +3,12 @@ html {
 }
 
 #scroll {
-  position: absolute;
+  position: fixed;
   overflow-x: hidden;
   height: 500px;
-  width: 300px;
-  left: 100px;
-  top: 20%;
+  width: 250px;
+  left: 10px;
+  top: 10%;
 }
 
 #googlepic {
@@ -299,7 +299,7 @@ button {
   color: black;
   background-color: #ffffff;
   padding: 5px;
-  border: 2px solid rgb(27, 27, 27);
+  border: 2px solid rgb(214, 125, 125);
   border-radius: 5px;
   cursor: pointer;
 }

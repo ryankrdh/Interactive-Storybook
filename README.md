@@ -8,7 +8,7 @@ To demonstrate what I know about Html, Css, and Javascript.
 
 ## Why did you build this project?
 
-To practice some common RPG concepts.
+This is a project I made for fun to practice some common RPG concepts.
 
 ## How to use
 
@@ -44,4 +44,6 @@ Will work on deploying it on a server in the future.
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-“Sound effects obtained from https://www.zapsplat.com“
+Sound effects obtained from https://www.zapsplat.com
+
+Images obtained from https://pixabay.com

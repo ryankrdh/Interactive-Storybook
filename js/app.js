@@ -33,34 +33,124 @@ function play(sound) {
   sound.play();
 }
 
-// renderPage(\'You hear others in the cave..\'), battle(dog,ryanMurderOfCrows)
-// renderPage(\'You injure yourself climbing the rubble..\'), doDamage(10)
-//<button onclick=\"giveAction(bowlOBJ), renderPage(\'You reach an ocean..\')
+/* <button onclick="giveAction(bowlOBJ), renderPage(\'You are in the kitchen.\')">
+    
+<button onclick="renderPage(\'You go out to the park.\'), battle(dog,streetCat), play(cat)"> */
 
-/*------------------------------------START, FAINT SCENES-----------------------------------------*/
+/*------------------------------------INTRODUCTION SCENE-----------------------------------------*/
 new SceneConstructor(
-  'start1',
-  'LIFE OF A SHIBA INU: Live like a Shiba! Eating/drinking will refill your HEALTH. Resting/sleeping will refill your ENERGY. Certain events will drain your ENERGY and then your HEALTH. Click on the PINK button on LOWER RIGHT to START!',
-  "<ul id = \"mainChoiceButtonStart\"><li><img onclick=\"renderPage('You wake up in a cave..')\" src='img/startIcon.png' class='paths'></img></li></ul>",
-  'img/doghead.jpg'
-);
-
-new SceneConstructor(
-  'fainted',
-  "You've fainted! Luckily your owner was able to bring you back home!",
-  '<button id = "buttonFainted" onclick="renderPage(\'start1\')">\r\nStart Over\r\n</button>',
+  'Start',
+  'LIFE OF A SHIBA INU: Live like a Shiba! Eating/drinking will refill your HEALTH. Resting/sleeping will refill your ENERGY. Certain events will drain your ENERGY and then your HEALTH. Click on the SHIBA button on LOWER RIGHT to START!',
+  "<ul id = \"mainChoiceButtonStart\"><li><img onclick=\"renderPage('You are at home.')\" src='img/startIcon.png' class='paths'></img></li></ul>",
   'img/doghead.jpg'
 );
 
 /*------------------------------------SCENES START-----------------------------------------*/
+////////////// There will be a lot of spacing in the constructor scenes for simplicity sake //////////////
 
-function checkIfFainted(scene) {
-  if (dog.hitPoints <= 0) {
-    play(yelp);
-    alert('You have fainted. Your owner carried you back home.');
-    resetDog();
-  } else {
-    renderPage(scene);
+/*----------------HOME----------------*/
+new SceneConstructor(
+  'You are at home.',
+  'You are at home. Do what dogs do! Remember! Your energy will diminish slowly over time, keep eating to maintain energy!',
+
+  '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(bowlOBJ), renderPage(\'You are in the kitchen.\'), play(running)"> Demand food from human </button></li> \r <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\'), play(happyBark)"> Take meat off of table! </button></li> \r <li><button onclick="renderPage(\'You are exploring the park.\'), doHunger(5), play (petDoor)"> Go to the park </button></li> \r <li> <button onclick="renderPage(\'You are exploring the streets.\'), doHunger(5), play(petDoor)"> Go to the streets </button></li> </ul>',
+
+  'img/home1.jpg'
+);
+
+new SceneConstructor(
+  'You are in the kitchen.',
+  'You take the food and store it somewhere safe.',
+
+  '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(woundOBJ), renderPage(\'You are in the kitchen..\'), play(running)"> Play with human </button></li> \r <li><button onclick="renderPage(\'You are exploring the park.\'), doHunger(5), play (petDoor)"> Go to the park </button></li> \r <li> <button onclick="renderPage(\'You are exploring the streets.\'), doHunger(5), play(petDoor)"> Go to the streets </button></li> </ul>',
+
+  'img/kitchen.jpg'
+);
+
+new SceneConstructor(
+  'You are in the kitchen..',
+  'You play with the human until the human gets tired to throw the ball for you anymore.',
+
+  '<ul id = "mainChoiceButton"><li> <button onclick=" renderPage(\'You are in the living room.\'), play(angryBark)"> Ask human to play more! </button></li> \r <li><button onclick="renderPage(\'You are exploring the park.\'), doHunger(5), play (petDoor)"> Go to the park </button></li> \r <li> <button onclick="renderPage(\'You are exploring the streets.\'), doHunger(5), play(petDoor)"> Go to the streets </button></li> </ul>',
+
+  'img/kitchen.jpg'
+);
+
+new SceneConstructor(
+  'You are in the living room.',
+  'Human seems to be tired... The human lays on the sofa with their rectangular device in their paws.',
+
+  '<ul id = "mainChoiceButton"> <li><button onclick="renderPage(\'You are exploring the park.\'), doHunger(5), play (petDoor)"> Go to the park </button></li> \r <li> <button onclick="renderPage(\'You are exploring the streets.\'), doHunger(5), play(petDoor)"> Go to the streets </button></li> </ul>',
+
+  'img/living_room.jpg'
+);
+
+/*----------------PARK----------------*/
+
+new SceneConstructor(
+  'You are exploring the park.',
+  'You sniff around looking for food.',
+
+  //   '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(bowlOBJ), renderPage(\'You are in the kitchen.\')"> Demand food from human </button></li> \r <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
+  'img/park1.jpg'
+);
+
+/*----------------BEACH----------------*/
+
+new SceneConstructor(
+  'You are exploring the beach.',
+  'You sniff around looking for food.',
+
+  //   '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(bowlOBJ), renderPage(\'You are in the kitchen.\')"> Demand food from human </button></li> \r <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
+  'img/doghead.jpg'
+);
+
+/*----------------STREETS----------------*/
+
+new SceneConstructor(
+  'You are exploring the streets.',
+  'You sniff around looking for food.',
+
+  //   '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(bowlOBJ), renderPage(\'You are in the kitchen.\'), battle(dog,streetCat)"> Demand food from human </button></li> \r <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
+  'img/streets1.jpg'
+);
+
+/*----------------FAINT----------------*/
+
+new SceneConstructor(
+  'Fainted',
+  'You sleep the whole day after your human brought you back home.',
+
+  '<ul id = "mainChoiceButton"><li> <button onclick=" renderPage(\'You are at home.\')"> Wake up </button></li></ul>',
+
+  'img/fainted.jpg'
+);
+
+function faintedDog() {
+  play(yelp);
+  alert('You have fainted. Your human carried you back home.');
+  // show player name on display
+  var displayName = document.getElementById('charName-id');
+  displayName.innerHTML = dog.name;
+  while (dog.items.length > 0) {
+    loseAction(dog.items[0]);
+  }
+  dog.hitPoints = 100;
+  dog.energyHP = 0;
+  dog.items = [];
+  dog.scenesVisited = [];
+  dog.attackPower = 10;
+  HB.setValue(100);
+  AB.setValue(0);
+  renderPage('Fainted');
+  while (allScroll.firstChild) {
+    allScroll.removeChild(allScroll.firstChild);
+  }
+  while (dog.items.length > 0) {
+    loseAction(dog.items[0]);
   }
 }
 
@@ -109,7 +199,7 @@ function resetDog() {
   dog.attackPower = 10;
   HB.setValue(100);
   AB.setValue(0);
-  renderPage('start1');
+  renderPage('Start');
   while (allScroll.firstChild) {
     allScroll.removeChild(allScroll.firstChild);
   }
@@ -121,9 +211,7 @@ function resetDog() {
 // THIS MAKES THE OBJECTS RENDER.
 function renderPage(sceneToRender) {
   if (dog.hitPoints <= 0) {
-    resetDog();
-    alert('You have died');
-    // resetDog();
+    faintedDog();
   } else {
     savedog();
     while (bodyMain.firstChild) {
@@ -223,6 +311,27 @@ AB.setValue(dog.energyHP); // will create a new health bar instance and pass dog
 
 /*------------------------------------DAMAGE CONTROLS-----------------------------------------*/
 
+// function cat() {}
+
+function doHunger(damage) {
+  // does energy exist? if so apply damage to energy before health
+  if (dog.energyHP > 0) {
+    play(happyBark);
+    return loseEnergy(damage);
+  }
+  HB.setValue(dog.hitPoints - damage);
+  dog.hitPoints = dog.hitPoints - damage;
+  // if number is greather than 0 reset to 0
+  if (dog.hitPoints < 0) {
+    play(yelp);
+    dog.hitPoints = 0;
+  }
+  var damageScroll = document.getElementById('scroll');
+  var sceneDamage1 = document.createElement('li');
+  //   sceneDamage1.innerHTML = 'You take ' + damage + ' damage from being hungry';
+  damageScroll.appendChild(sceneDamage1);
+}
+
 function doDamage(damage) {
   // does energy exist? if so apply damage to energy before health
   if (dog.energyHP > 0) {
@@ -293,7 +402,7 @@ function handleBowlClick() {
   for (var i = 0; i < dog.items.length; i++) {
     if (dog.items[i].name === bowlOBJ.name) {
       play(bowlEat);
-      gainEnergy(50);
+      gainEnergy(20);
       alert(
         'Your human gives you a bowl of food. You eat it and gain 50 energy.'
       );
@@ -306,7 +415,7 @@ function handleWaterClick() {
   for (var i = 0; i < dog.items.length; i++) {
     if (dog.items[i].name === waterOBJ.name) {
       play(water);
-      gainEnergy(30);
+      gainEnergy(15);
       alert('You drink some water. You gain 30 energy.');
       loseAction(waterOBJ);
     }
@@ -317,7 +426,7 @@ function handleMeatClick() {
   for (var i = 0; i < dog.items.length; i++) {
     if (dog.items[i].name === meatOBJ.name) {
       play(boneEat);
-      gainEnergy(70);
+      gainEnergy(30);
       alert('You eat the meat along with the bones. You gain 70 energy!');
       loseAction(meatOBJ);
     }
@@ -328,7 +437,7 @@ function handleSausageClick() {
   for (var i = 0; i < dog.items.length; i++) {
     if (dog.items[i].name === sausageOBJ.name) {
       play(softEat);
-      gainEnergy(20);
+      gainEnergy(10);
       alert('You eat the dog treat. You gain 20 energy.');
       loseAction(sausageOBJ);
     }
@@ -381,28 +490,33 @@ function battle(dog, enemy) {
 }
 
 var streetCat = {
-  hitPoints: 50,
-  attackPower: 15,
-};
-
-var streetDog = {
-  hitPoints: 80,
-  attackPower: 10,
-};
-
-var cityPidgeons = {
-  hitPoints: 20,
-  attackPower: 5,
-};
-
-var ryanSingleCrow = {
   hitPoints: 40,
   attackPower: 20,
 };
 
+var streetDog = {
+  hitPoints: 120,
+  attackPower: 10,
+};
+
+var cityPidgeons = {
+  hitPoints: 30,
+  attackPower: 15,
+};
+
+var beachSeagulls = {
+  hitPoints: 40,
+  attackPower: 20,
+};
+
+var parkCoyote = {
+  hitPoints: 150,
+  attackPower: 10,
+};
+
 var ryanMurderOfCrows = {
   hitPoints: 45,
-  attackPower: 10,
+  attackPower: 70,
 };
 
 var ryanLeopard = {
