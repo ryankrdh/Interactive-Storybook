@@ -4,14 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>TextRPG</title>
+    <title>Life of a Shiba Inu</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main></main>
+    <main id="bodymain"></main>
+    <div id="scroll"></div>
+    <footer>
+      <h5 id="title-hp">HEALTH</h5>
+      <img src="img/health.png" />
+      <div class="health-bar">
+        <div class="health-bar-value"></div>
+        <div class="health-bar-fill"></div>
+      </div>
+      <img
+        id="img-item-bowl"
+        class="img-margin"
+        title="click-potion"
+        src="img/bowl.png"
+      /><img id="img-item-water" class="img-margin" src="img/water.png" /><img
+        id="img-item-wound"
+        class="img-margin"
+        src="img/wound.png"
+      />
+      <h4>
+        SHIBA NAME:
+        <h3 id="charName-id"></h3>
+      </h4>
+      <h6 id="title-ar">ENERGY</h6>
+      <img src="img/energy.png" />
+      <div class="energy-Bar">
+        <div class="energy-Bar-value"></div>
+        <div class="energy-Bar-fill"></div>
+      </div>
 
-    <footer></footer>
+      <img id="img-item-meat" class="img-margin" src="img/meat.png" /><img
+        id="img-item-sausage"
+        class="img-margin"
+        src="img/sausage.png"
+      /><img id="img-item-sleep" class="img-margin" src="img/sleep.png" />
+
+      <button onclick="resetDog()" id="resetbutton">Start New Game</button>
+    </footer>
     <script src="js/app.js"></script>
   </body>
 </html>
