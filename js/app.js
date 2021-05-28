@@ -28,6 +28,7 @@ var bowlEat = new Audio('sounds/bowl_eat.mp3');
 var churchBackground = new Audio('sounds/Church_street.mp3');
 var beachBackground = new Audio('sounds/beach.mp3');
 var bed = new Audio('sounds/bed.mp3');
+var pigeons = new Audio('sounds/pigeons.mp3');
 
 function play(sound) {
   sound.play();
@@ -53,7 +54,7 @@ new SceneConstructor(
   'You are at home.',
   'You are at home. Do what dogs do! Remember! Your energy will diminish slowly over time, keep eating to maintain energy!',
 
-  '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(bowlOBJ), renderPage(\'You are in the kitchen.\'), play(running)"> Demand food from human </button></li> \r <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\'), play(happyBark)"> Take meat off of table! </button></li> \r <li><button onclick="renderPage(\'You are exploring the park.\'), doHunger(5), play (petDoor)"> Go to the park </button></li> \r <li> <button onclick="renderPage(\'You are exploring the streets.\'), doHunger(5), play(petDoor)"> Go to the streets </button></li> </ul>',
+  '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(bowlOBJ), renderPage(\'You are in the kitchen.\'), play(running)"> Demand food from human </button></li> \r <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen...\'), doHunger(30), play(happyBark)"> Take meat off of table! </button></li> \r <li><button onclick="renderPage(\'You are exploring the park.\'), doHunger(5), play (petDoor)"> Go to the park </button></li> \r <li> <button onclick="renderPage(\'You are exploring the streets.\'), doHunger(5), play(petDoor)"> Go to the streets </button></li> </ul>',
 
   'img/home1.jpg'
 );
@@ -77,6 +78,15 @@ new SceneConstructor(
 );
 
 new SceneConstructor(
+    'You are in the kitchen...',
+    'The human chase you all around the house trying to take the meat from you. But you are too fast for the human!',
+  
+    '<ul id = "mainChoiceButton"><li> <button onclick=" renderPage(\'You are in the living room.\'), play(running)"> Ask human to chase more! </button></li></ul>',
+  
+    'img/kitchen1.jpg'
+  );
+
+new SceneConstructor(
   'You are in the living room.',
   'Human seems to be tired... The human lays on the sofa with their rectangular device in their paws.',
 
@@ -89,22 +99,155 @@ new SceneConstructor(
 
 new SceneConstructor(
   'You are exploring the park.',
-  'You sniff around looking for food.',
+  'There are a lot of dogs here playing. You see a huge dog with a treat in its mouth..',
 
-  //   '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(bowlOBJ), renderPage(\'You are in the kitchen.\')"> Demand food from human </button></li> \r <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+  '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+  <li><button onclick="giveAction(sausageOBJ), renderPage(\'You are exploring the park..\'), battle(dog,streetDog), play(angryBark)"> Steal the treat! </button></li> \r 
+  
+  <li><button onclick="renderPage(\'You are exploring the park...\'), doHunger(5)"> Explore park! </button></li> \r 
+  
+  <li> <button onclick="giveAction(waterOBJ), renderPage(\'You are exploring the park....\'), battle(dog,cityPigeons), play(pigeons)"> Chase Pigeons! </button></li> </ul>',
 
   'img/park1.jpg'
 );
 
+new SceneConstructor(
+  'You are exploring the park..',
+  'You are enjoying the park. You decide to do some more exploring.',
+
+  '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+  <li><button onclick="giveAction(woundOBJ), renderPage(\'You are exploring the park...\'), doHunger(5), play(running)"> Ask for pets from humans </button></li> \r 
+  
+  <li><button onclick="renderPage(\'You are exploring the park...\'), doHunger(5)"> Explore park! </button></li> \r 
+  
+  <li> <button onclick="giveAction(waterOBJ), renderPage(\'You are exploring the park....\')"> Approach the pond </button></li> </ul>',
+
+  'img/park1.jpg'
+);
+
+new SceneConstructor(
+    'You are exploring the park...',
+    'The park is lively with humans and their dogs. You look around for more excitement.',
+  
+    '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+    
+    <li><button onclick=" renderPage(\'You are exploring the park..\'), doHunger(5), play(running)"> Explore Park! </button></li> \r 
+    
+    <li><button onclick="giveAction(waterOBJ), renderPage(\'You are exploring the park....\'), doHunter(5), play(happyBark)"> Explore park! </button></li> \r 
+    
+    <li> <button onclick=" renderPage(\'You are exploring the beach.\'), doHunter(5), play(running)"> Exit the park! </button></li> </ul>',
+  
+  
+    'img/park2.jpg'
+  );
+
+  new SceneConstructor(
+    'You are exploring the park....',
+    'You stand next to a clear pond. Water looks good to drink.',
+  
+    '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+    
+    <li> <button onclick=" renderPage(\'You are exploring the beach.\'), doHunter(5), play(running)"> Exit the park! </button></li> </ul>',
+  
+    'img/park3.jpg'
+  );
 /*----------------BEACH----------------*/
 
 new SceneConstructor(
   'You are exploring the beach.',
   'You sniff around looking for food.',
 
-  //   '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(bowlOBJ), renderPage(\'You are in the kitchen.\')"> Demand food from human </button></li> \r <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+//     '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+//   <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r 
+  
+//   <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r 
+  
+//   <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
 
-  'img/doghead.jpg'
+
+  'img/park4.jpg'
+);
+
+new SceneConstructor(
+  'You are exploring the beach..',
+  'You sniff around looking for food.',
+
+//     '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+//   <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r 
+  
+//   <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r 
+  
+//   <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
+  'img/beach2.jpg'
+);
+
+new SceneConstructor(
+  'You are exploring the beach...',
+  'You sniff around looking for food.',
+
+//     '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+//   <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r 
+  
+//   <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r 
+  
+//   <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
+
+  'img/beach3.jpg'
+);
+
+new SceneConstructor(
+  'You are exploring the beach....',
+  'You sniff around looking for food.',
+
+//     '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+//   <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r 
+  
+//   <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r 
+  
+//   <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
+
+  'img/beach4.jpg'
+);
+
+new SceneConstructor(
+  'You are exploring the beach.....',
+  'You sniff around looking for food.',
+
+//     '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+//   <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r 
+  
+//   <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r 
+  
+//   <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
+
+  'img/beach5.jpg'
+);
+
+new SceneConstructor(
+  'You are exploring the beach......',
+  'You sniff around looking for food.',
+
+//     '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+//   <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r 
+  
+//   <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r 
+  
+//   <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
+
+  'img/beach6.jpg'
 );
 
 /*----------------STREETS----------------*/
@@ -113,10 +256,49 @@ new SceneConstructor(
   'You are exploring the streets.',
   'You sniff around looking for food.',
 
-  //   '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(bowlOBJ), renderPage(\'You are in the kitchen.\'), battle(dog,streetCat)"> Demand food from human </button></li> \r <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+//     '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+//   <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r 
+  
+//   <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r 
+  
+//   <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
 
   'img/streets1.jpg'
 );
+
+new SceneConstructor(
+    'You are exploring the streets..',
+    'You sniff around looking for food.',
+  
+//     '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+//   <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r 
+  
+//   <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r 
+  
+//   <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
+  
+    'img/streets2.jpg'
+  );
+
+  new SceneConstructor(
+    'You are exploring the streets....',
+    'You sniff around looking for food.',
+  
+//     '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r 
+  
+//   <li><button onclick="giveAction(meatOBJ), renderPage(\'You are in the kitchen.\')"> Take meat off of table! </button></li> \r 
+  
+//   <li><button onclick="renderPage(\'You go out to the park.\')"> Go to the park! </button></li> \r 
+  
+//   <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+
+  
+    'img/streets3.jpg'
+  );
 
 /*----------------FAINT----------------*/
 
@@ -126,7 +308,7 @@ new SceneConstructor(
 
   '<ul id = "mainChoiceButton"><li> <button onclick=" renderPage(\'You are at home.\')"> Wake up </button></li></ul>',
 
-  'img/fainted.jpg'
+  'img/sleep.jpg'
 );
 
 function faintedDog() {
@@ -402,7 +584,7 @@ function handleBowlClick() {
   for (var i = 0; i < dog.items.length; i++) {
     if (dog.items[i].name === bowlOBJ.name) {
       play(bowlEat);
-      gainEnergy(20);
+      gainEnergy(40);
       alert(
         'Your human gives you a bowl of food. You eat it and gain 50 energy.'
       );
@@ -415,7 +597,7 @@ function handleWaterClick() {
   for (var i = 0; i < dog.items.length; i++) {
     if (dog.items[i].name === waterOBJ.name) {
       play(water);
-      gainEnergy(15);
+      gainEnergy(30);
       alert('You drink some water. You gain 30 energy.');
       loseAction(waterOBJ);
     }
@@ -426,7 +608,7 @@ function handleMeatClick() {
   for (var i = 0; i < dog.items.length; i++) {
     if (dog.items[i].name === meatOBJ.name) {
       play(boneEat);
-      gainEnergy(30);
+      gainEnergy(70);
       alert('You eat the meat along with the bones. You gain 70 energy!');
       loseAction(meatOBJ);
     }
@@ -437,7 +619,7 @@ function handleSausageClick() {
   for (var i = 0; i < dog.items.length; i++) {
     if (dog.items[i].name === sausageOBJ.name) {
       play(softEat);
-      gainEnergy(10);
+      gainEnergy(20);
       alert('You eat the dog treat. You gain 20 energy.');
       loseAction(sausageOBJ);
     }
@@ -448,7 +630,7 @@ function handleWoundClick() {
   for (var i = 0; i < dog.items.length; i++) {
     if (dog.items[i].name === woundOBJ.name) {
       play(running);
-      healDamage(20);
+      healDamage(30);
       alert(
         'A human bends over and gives you head and back scratches. You gain 20 health.'
       );
@@ -490,38 +672,28 @@ function battle(dog, enemy) {
 }
 
 var streetCat = {
-  hitPoints: 40,
-  attackPower: 20,
-};
-
-var streetDog = {
-  hitPoints: 120,
-  attackPower: 10,
-};
-
-var cityPidgeons = {
   hitPoints: 30,
   attackPower: 15,
 };
 
-var beachSeagulls = {
-  hitPoints: 40,
-  attackPower: 20,
-};
-
-var parkCoyote = {
-  hitPoints: 150,
+var streetDog = {
+  hitPoints: 60,
   attackPower: 10,
 };
 
-var ryanMurderOfCrows = {
-  hitPoints: 45,
-  attackPower: 70,
+var cityPigeons = {
+  hitPoints: 30,
+  attackPower: 10,
 };
 
-var ryanLeopard = {
-  hitPoints: 100,
-  attackPower: 30,
+var beachSeagulls = {
+  hitPoints: 50,
+  attackPower: 7,
+};
+
+var parkCoyote = {
+  hitPoints: 120,
+  attackPower: 10,
 };
 
 /*------------------------------------LOCAL STORAGE-----------------------------------------*/
