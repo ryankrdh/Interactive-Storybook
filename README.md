@@ -1,4 +1,4 @@
-# TextRPG
+# Choice Driven Game.
 
 This is a choice driven game called 'Life of a Shiba Inu'
 
