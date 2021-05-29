@@ -150,8 +150,7 @@ new SceneConstructor(
   'You are exploring the beach..',
   'You chase away the seagulls and take the meat they were eating.',
 
-  '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r <li><button onclick=" renderPage(\'You are exploring the beach....\'), doHunger(20), play(yelp)"> Drink the ocean water. </button></li> \r
-  <li><button onclick=" giveAction(woundOBJ), renderPage(\'You are exploring the beach...\')"> Walk up to a human </button></li> \r <li> <button onclick=" renderPage(\'You are exploring the park.\'), doHunger(5), play(running)"> Back to the park </button></li> </ul>',
+  '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r <li><button onclick=" renderPage(\'You are exploring the beach....\'), doHunger(20), play(yelp)"> Drink the ocean water. </button></li> \r <li><button onclick=" giveAction(woundOBJ), renderPage(\'You are exploring the beach...\')"> Walk up to a human </button></li> \r <li> <button onclick=" renderPage(\'You are exploring the park.\'), doHunger(5), play(running)"> Back to the park </button></li> </ul>',
 
   'img/beach2.jpg'
 );
@@ -176,7 +175,7 @@ new SceneConstructor(
 
 new SceneConstructor(
   'You are exploring the beach.....',
-  'You come across a dog that isn\'t leashed and gets into a fight..',
+  "You come across a dog that isn't leashed and gets into a fight..",
 
   '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r <li><button onclick=" renderPage(\'You are exploring the beach......\'), doHunger(5), play(running)"> Exit the beach </button></li> \r <li><button onclick="renderPage(\'You are exploring the park.\'), doHunger(5), play(running)"> Go back to the park! </button></li> \r <li> <button onclick="giveAction(woundOBJ), renderPage(\'You are exploring the beach......\'), play(running)"> find humans to get petted </button></li> </ul>',
 
@@ -225,7 +224,7 @@ new SceneConstructor(
   'You are exploring the streets....',
   'You walk into the alleyway and end up in an open desserted road. A coyote is there.',
 
-  '<ul id = "mainChoiceButton"> <li><button onclick=" renderPage(\'You are exploring the streets.....\'), battle(dog,parkCoyote), play(yelp)"> RUN!! </button></li> \r <li><button onclick="renderPage(\'You are exploring the streets.....\'), battle(dog,parkCoyote), play(angryBark)"> ATTACK!! </button></li> \r <li> <button onclick="giveAction(sleepOBJ), renderPage(\'You explore South..\')"> GET POTION </button></li> </ul>',
+  '<ul id = "mainChoiceButton"> <li><button onclick=" renderPage(\'You are exploring the streets.....\'), battle(dog,parkCoyote), play(yelp)"> RUN!! </button></li> \r <li><button onclick="renderPage(\'You are exploring the streets.....\'), battle(dog,parkCoyote), play(angryBark)"> ATTACK!! </button></li></ul>',
 
   'img/coyote.jpg'
 );
