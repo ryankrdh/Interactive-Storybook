@@ -186,7 +186,7 @@ new SceneConstructor(
   'You are exploring the beach......',
   'You follow some humans around and end up at the end of the beach. There is a cat sitting at the exit.',
 
-  '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r <li><button onclick=" renderPage(\'You are exploring the streets.\'), battle(dog,streetCat), play(cat)("> Sneak Past the cat </button></li> \r <li><button onclick="renderPage(\'You are exploring the streets.\'), battle(dog,streetCat), play(cat)"> Scare the cat! </button></li> </ul>',
+  '<ul id = "mainChoiceButton"><li> <button onclick="giveAction(sleepOBJ), renderPage(\'You are at home.\'), play(petDoor)"> Go back home to sleep. </button></li> \r <li><button onclick=" renderPage(\'You are exploring the streets.\'), battle(dog,streetCat), play(cat)"> Sneak Past the cat </button></li> \r <li><button onclick="renderPage(\'You are exploring the streets.\'), battle(dog,streetCat), play(cat)"> Scare the cat! </button></li> </ul>',
 
   'img/beach6.jpg'
 );
@@ -611,27 +611,27 @@ function battle(dog, enemy) {
 
 var streetCat = {
   hitPoints: 60,
-  attackPower: 10,
+  attackPower: 15,
 };
 
 var streetDog = {
   hitPoints: 80,
-  attackPower: 10,
+  attackPower: 15,
 };
 
 var cityPigeons = {
   hitPoints: 40,
-  attackPower: 10,
+  attackPower: 15,
 };
 
 var beachSeagulls = {
   hitPoints: 50,
-  attackPower: 15,
+  attackPower: 20,
 };
 
 var parkCoyote = {
   hitPoints: 60,
-  attackPower: 20,
+  attackPower: 30,
 };
 
 /*-----------------LOCAL STORAGE-----------------*/
