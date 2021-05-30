@@ -57,7 +57,7 @@ div #mainChoiceButtonStart {
 div #mainChoiceButton {
   position: fixed;
   margin-top: 500px;
-  margin-left: center;
+  margin-left: 80px;
 }
 
 div #mainChoiceButton2 {
