@@ -20,7 +20,7 @@ The player has HP and Energy. When taking damage from battles, the energy will d
 
 The player and all the animals will have their own HP and attack power.
 
-The player is able to 'pick up' Items to use later.
+The player is able to 'pick up' Actions to use later.
 
 The game is saved in the local storage to be continued later.
 
