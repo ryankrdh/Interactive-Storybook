@@ -34,7 +34,7 @@ Will work on deploying it on a server in the future.
 
 ## Built With
 
-- Visual Studio (Javascript, Html, CSS)
+- Visual Studio Code (Javascript, Html, CSS)
 
 ## Authors
 
