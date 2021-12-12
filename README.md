@@ -26,7 +26,7 @@ The game is saved in the local storage to be continued later.
 
 ## Getting Started
 
-<href="https://ryankrdh.github.io/Choice-Driven-Game/"><img src="startIcon.png">
+<a href="https://ryankrdh.github.io/Choice-Driven-Game/"><img src="startIcon.png">
 
 ## Deployment
 
