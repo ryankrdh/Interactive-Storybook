@@ -26,7 +26,7 @@ The game is saved in the local storage to be continued later.
 
 ## Getting Started
 
-Download all files and folders into ONE folder. Open "index.html" to play.
+<href="https://ryankrdh.github.io/Choice-Driven-Game/"><img src="startIcon.png">
 
 ## Deployment
 
