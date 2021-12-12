@@ -25,8 +25,8 @@ The player is able to 'pick up' Actions to use later.
 The game is saved in the local storage to be continued later.
 
 ## Getting Started
-
-<a href="https://ryankrdh.github.io/Choice-Driven-Game/"><img src="startIcon.png">
+Click to Start!
+<a href="https://ryankrdh.github.io/Choice-Driven-Game/"><img src="startIcon.png"></a>
 
 ## Deployment
 
