@@ -1,6 +1,6 @@
 # Interactive Storybook
 
-### Welcome to my game 'Live of a Shiba Inu'!
+### Welcome to my game 'Life of a Shiba Inu'!
 
 Click ⬇ to START!<br><br>
 <a href="https://ryankrdh.github.io/Choice-Driven-Game/"><img src="img/startIcon.png"></a>
