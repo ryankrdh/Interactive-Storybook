@@ -6,25 +6,29 @@ Click ⬇ to START!<br><br>
 <a href="https://ryankrdh.github.io/Choice-Driven-Game/"><img src="img/startIcon.png"></a>
 
 
-## Project Summary:
-Created a Tic Tac Toe game using JavaScript, showcasing proficiency in front-end web development and problem-solving skills. The game allows you to play against an AI to take turns marking X and O on a 3x3 grid until one player wins or the game ends in a draw. Implemented logic to validate moves, check for win conditions, and handle game outcomes. Demonstrated understanding of HTML, CSS, and JavaScript to build an interactive and user-friendly gaming experience. Utilized object-oriented programming principles to structure the code and maintain modularity.
+##Project Summary:
+The interactive storybook project is a web-based application that allows users to experience a story as a **Shiba Inu** dog. The story unfolds through a series of scenes with **descriptive texts** and interactive choices that users can make. Along the way, the users can pick up and use various items to influence the dog's health and energy levels. The project is designed to provide an engaging and immersive experience for the users as they explore different scenarios and interact with the virtual world.
 
-## Key Features:
-* **JavaScript Mastery:** The project showcases my expertise in JavaScript, employing modern ES6+ features and understanding behind-the-scenes concepts like the event loop, hoisting, and scoping.
+##Key Features:
+* **Scene-Based Storytelling:** The storybook is structured into scenes, each with its descriptive text and background image. Users progress through the story by making choices that lead to different scenes, shaping the dog's journey.
   
-* **Game Logic:** I have implemented the complete game logic, allowing players to interact with the command-line interface and enjoy seamless gameplay against the AI.
-  
-* **AI using Minimax Algorithm:** The AI player is powered by the powerful Minimax algorithm, ensuring challenging gameplay and intelligent moves by the AI opponent. 
+* **Interactive Choices:** Users have the freedom to make choices on behalf of the **Shiba Inu** dog. These choices influence the storyline and can lead to different outcomes.
 
-* **User Interaction:** The command-line interface provides an intuitive experience for players to make their moves and witness the AI's moves in real-time. 
+* **Item Collection and Usage:** Throughout the story, users can find and collect items such as food, water, treats, and more. These items can be used strategically to replenish the dog's health and energy.
 
-* **Winning Detection and Visualization:** The project includes a winning combination detection algorithm that accurately identifies the winner and visually highlights the winning line on the board using SVG. 
+* **Health and Energy Bars:** The application includes health and energy bars to display the dog's current status. These bars indicate the dog's health and energy levels, affected by the user's choices and item usage.
 
-* **Modularity and Organization:** I have designed the codebase with a focus on modularity and organization, promoting code readability and maintainability.
+* **Enemy Battles:** Certain scenes involve encounters with other animals like cats, dogs, seagulls, etc. Users can engage in battles with these enemies, and the outcomes will impact the dog's health and the story's progression.
 
-* **Error Handling and Game State Management:** Robust error handling ensures smooth gameplay, while proper game state management allows for game restarts and tracking the state of the board. 
+* **Audio Integration:** The application includes audio elements such as background music, sounds of the dog's actions, enemy encounters, etc., to enhance the overall experience.
 
-* **Version Control:** The project is hosted on GitHub, reflecting my proficiency in version control and collaborative development practices. 
+* **User Progress Tracking:** The application keeps track of the user's progress through the story, ensuring they can continue from where they left off.
+
+* **Save and Reset:** Users can save their progress and reset the game to start again with a new storyline or make different choices.
+
+* **Responsive Design:** The project is designed with responsive web design principles, ensuring compatibility across various devices and screen sizes.
+
+* **User Experience (UX) Enhancements:** The project focuses on providing an enjoyable and intuitive user experience, with clear instructions and easy-to-navigate interfaces.
 
 
 ## How to use
