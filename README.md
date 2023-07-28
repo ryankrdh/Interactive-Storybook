@@ -6,10 +6,10 @@ Click ⬇ to START!<br><br>
 <a href="https://ryankrdh.github.io/Choice-Driven-Game/"><img src="img/startIcon.png"></a>
 
 
-##Project Summary:
+## Project Summary:
 The interactive storybook project is a web-based application that allows users to experience a story as a **Shiba Inu** dog. The story unfolds through a series of scenes with **descriptive texts** and interactive choices that users can make. Along the way, the users can pick up and use various items to influence the dog's health and energy levels. The project is designed to provide an engaging and immersive experience for the users as they explore different scenarios and interact with the virtual world.
 
-##Key Features:
+## Key Features:
 * **Scene-Based Storytelling:** The storybook is structured into scenes, each with its descriptive text and background image. Users progress through the story by making choices that lead to different scenes, shaping the dog's journey.
   
 * **Interactive Choices:** Users have the freedom to make choices on behalf of the **Shiba Inu** dog. These choices influence the storyline and can lead to different outcomes.
