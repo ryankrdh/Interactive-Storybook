@@ -3,7 +3,7 @@
 ### Welcome to my game 'Life of a Shiba Inu'!
 
 Click ⬇ to START!<br><br>
-<a href=["https://github.com/ryankrdh/Interactive-Storybook"](https://ryankrdh.github.io/Interactive-Storybook/)><img src="img/startIcon.png"></a>
+<a href="https://github.com/ryankrdh/Interactive-Storybook"><img src="img/startIcon.png"></a>
 
 
 ## Project Summary:
